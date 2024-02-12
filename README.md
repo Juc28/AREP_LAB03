@@ -29,10 +29,30 @@ El objetivo es comprender la arquitectura de Sparkweb y aprender a crear un serv
     ```
    
 # Arquitectura
+El paquete org.example.lambda tiene dos clases y una interfaz.
+ *  MyWebServices: es la clase principal que contiene el método principal que inicia el servidor web.
+   Este método crea dos servicios web y los registra en las rutas /arep y /harry.
+*  WebService: es una interfaz que define el método Handle que todos los servicios web deben implementar.
+  Este método toma un parámetro de tipo Cadena y devuelve una Cadena que contiene la respuesta HTTP.
+
+La clase HttpServer se encuentra en el paquete org.example.Taller02 y es responsable de iniciar el servidor web y manejar las solicitudes HTTP.
+ Esta clase tiene un método Runstart que crea un ServerSocket en el puerto especificado y escucha las solicitudes HTTP.
+ Cuando llega una solicitud, el servidor extrae la ruta y los parámetros de la solicitud y los envía al servicio web apropiado (si corresponde).
+ Si no hay ningún servicio web registrado en la ruta, el servidor devuelve una respuesta  de error HTTP 404.
+ 
+ Además, la clase HttpServer tiene un método Get estático que le permite registrar un servicio web en una ruta específica.
+ Este método requiere dos parámetros. Una ruta y un servicio web que se registra con esa ruta.Si la ruta o el servicio web es nulo o está vacío, el método no hace nada.
+ 
+ Esta clase también tiene un método handleStaticRequest para manejar solicitudes de archivos estáticos como HTML, CSS, JavaScript e imágenes.
+ Este método requiere dos parámetros:  ruta del archivo  y  socket del cliente.
+ Este método crea una respuesta HTTP con el tipo de contenido apropiado y envía el archivo al cliente a través del socket.
+ Si el archivo no existe o es un directorio, el método devuelve una respuesta HTTP de error 404.
+ Finalmente, la clase HttpServer tiene un método setStaticFilesDirectory que establece la ruta del directorio de archivos estáticos utilizada para servir archivos estáticos   a los clientes.Si el parámetro del directorio es nulo o está vacío, la función no hace nada.
+
 
 # Pruebas
 ## Pruebas Windows 
-## - 3 rutas para el get y la lectura de parámetros del query.:  
+## - 3 rutas para el get y la lectura de parámetros del query:  
 http://localhost:35000/action/arep
 
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/f90dcf33-14f7-4628-8487-7c1198b62b7d)
@@ -69,17 +89,39 @@ http://localhost:35000/archivos/harry.js
 <img  alt="image" src="https://github.com/Juc28/AREP_LAB03/assets/118181224/9a1d52b9-34a0-4370-beb5-fce510a1ba37">
 
 ## Pruebas Linux
+Se utlizo para probar una maquina virtual de Ubunto.
+
+- El get y la lectura de parámetros del query:
+  
 http://localhost:35000/action/harry
+
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/7327c4dd-47fa-4976-a206-f0aa73f357d9)
 http://localhost:35000/action/harry?param=Es%20precioso
+
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/71e6421a-6139-48b8-b423-d249fb9f2722)
+
+ - Al cargar una imagen:
+
+
 http://localhost:35000/archivos/Styles.jpg
+
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/d44e7871-8e4f-42e7-acd2-6351a56f5330)
+
+ - Al cargar un archivo html:
+
 http://localhost:35000/archivos/hello.html
+
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/136f8730-49dc-46cd-a403-f1d410424fb3)
+
+ - Al cargar un archivo csss:
+
 http://localhost:35000/archivos/harry.css
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/57f765c1-9cae-4176-85bc-bb8b959a423a)
+
+ - Al cargar un archivo js:
+ - 
 http://localhost:35000/archivos/harry.js
+
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/cf7c0114-6405-49ff-bf86-6c5ee9922b8b)
 
 
