@@ -85,7 +85,7 @@ http://localhost:35000/archivos/harry.js
 <img  alt="image" src="https://github.com/Juc28/AREP_LAB03/assets/118181224/9a1d52b9-34a0-4370-beb5-fce510a1ba37">
 
 ## Pruebas Linux
-Se utlizo para probar una maquina virtual de Ubunto.
+Se utlizo para probar una maquina virtual de Ubuntu.
 
 - El get y la lectura de parámetros del query:
   
@@ -109,19 +109,17 @@ http://localhost:35000/archivos/hello.html
 
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/136f8730-49dc-46cd-a403-f1d410424fb3)
 
- - Al cargar un archivo csss:
+ - Al cargar un archivo css:
 
 http://localhost:35000/archivos/harry.css
+
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/57f765c1-9cae-4176-85bc-bb8b959a423a)
 
  - Al cargar un archivo js:
- - 
+   
 http://localhost:35000/archivos/harry.js
 
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/cf7c0114-6405-49ff-bf86-6c5ee9922b8b)
-
-
-
 
 
 # Lincencia
