@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.example.Taller02","l":"HttpServer"},{"p":"org.example.lambda","l":"MyWebServices"},{"p":"org.example.lambda","l":"WebService"}];updateSearchResults();
