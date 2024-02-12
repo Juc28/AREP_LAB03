@@ -23,10 +23,6 @@ El objetivo es comprender la arquitectura de Sparkweb y aprender a crear un serv
    ```
    http://localhost:35000/action/arep
     ```
-
-     ```
-   http://localhost:35000/action/arep
-    ```
    
 # Arquitectura
 El paquete org.example.lambda tiene dos clases y una interfaz.
