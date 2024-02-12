@@ -1,18 +1,38 @@
 # LABORATORIO 02 DE AREP 
+Sparkweb es un microframework web que le permite crear fácilmente aplicaciones web  utilizando funciones Lambda.
+En este taller, exploraremos la arquitectura de Sparkweb y crearemos un servidor web que admita funciones similares a  Spark.
+En este ejercicio, implementará un servidor web que puede registrar servicios GET y POST utilizando funciones Lambda.
+También implementa una funcionalidad que le permite configurar un directorio para archivos estáticos.
+Es importante tener en cuenta que este servidor está construido utilizando  API  de Java básicas, sin utilizar ningún marco como Spark o Spring.
+El objetivo es comprender la arquitectura de Sparkweb y aprender a crear un servidor web simple que pueda manejar diferentes tipos de solicitudes y respuestas, servir archivos estáticos y configurar directorios para estos archivos.
 
 # Instalación 
 ## Herramientas 
 - [MAVEN](https://maven.apache.org) : Para el manejo de las dependecias. 
 - [GIT](https://git-scm.com) : Para el manejo de las versiones.
 - [JAVA](https://www.java.com/es/) : Lenguaje de programación manejado. 
++ Para poder correr el laboratorio se clona el repositorio en una máquina local con el siguiente comando
+  
+    ```
+  git clone https://github.com/Juc28/AREP_LAB03.git
+    ```
 
++ luego en el ide de preferencia en mi caso Intellij abrilo de la siguiente forma:
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/a959001f-0bbc-4f06-904b-609021cc8f8c)
++ Para ejecutar el laboratrio es la clase [MyWebServices](https://github.com/Juc28/AREP_LAB03/blob/master/Taller03/src/main/java/org/example/lambda/MyWebServices.java) y desde el ide de prefencia correr la clase mencionada, Luego, ejecute la clase y abra su navegador de confianza(En mi caso use [Google](https://www.google.com/?hl=es)). En la barra de direcciones colocar:
+   ```
+   http://localhost:35000/action/arep
+    ```
 
+     ```
+   http://localhost:35000/action/arep
+    ```
+   
 # Arquitectura
 
 # Pruebas
 ## Pruebas Windows 
-
+## - 3 rutas para el get y la lectura de parámetros del query.:  
 http://localhost:35000/action/arep
 
 ![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/f90dcf33-14f7-4628-8487-7c1198b62b7d)
@@ -25,13 +45,27 @@ http://localhost:35000/action/harry
 http://localhost:35000/action/harry?param=Es%20precioso
 <img  alt="image" src="https://github.com/Juc28/AREP_LAB03/assets/118181224/43e74668-a909-494b-a823-6854db5674cc">
 
-http://localhost:35000/archivos/Tokyo.jpg
+## - los archivos estáticos traidos del directorio : 
+ - Al cargar un imagen:
+
+ http://localhost:35000/archivos/Tokyo.jpg
+ 
 <img  alt="image" src="https://github.com/Juc28/AREP_LAB03/assets/118181224/bb072991-431b-41ba-9552-dae311eae2f2">
-http://localhost:35000/archivos/hello.html
+ - Al cargar un archivo html:
+
+   http://localhost:35000/archivos/hello.html
+  
 <img  alt="image" src="https://github.com/Juc28/AREP_LAB03/assets/118181224/e9a3b16e-bd7f-4421-aaef-b02c9c616c8e">
+ - Al cargar un archivo css:
+
 http://localhost:35000/archivos/harry.css
+
+
 <img  alt="image" src="https://github.com/Juc28/AREP_LAB03/assets/118181224/7d90c944-0227-4ade-ba5e-ecb50a747af8">
+ - Al cargar un archivo js:
+
 http://localhost:35000/archivos/harry.js
+
 <img  alt="image" src="https://github.com/Juc28/AREP_LAB03/assets/118181224/9a1d52b9-34a0-4370-beb5-fce510a1ba37">
 
 ## Pruebas Linux
