@@ -6,6 +6,8 @@
 - [GIT](https://git-scm.com) : Para el manejo de las versiones.
 - [JAVA](https://www.java.com/es/) : Lenguaje de programación manejado. 
 
+![image](https://github.com/Juc28/AREP_LAB03/assets/118181224/a959001f-0bbc-4f06-904b-609021cc8f8c)
+
 # Arquitectura
 
 # Pruebas
