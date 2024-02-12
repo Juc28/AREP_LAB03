@@ -1,4 +1,4 @@
-# LABORATORIO 02 DE AREP 
+# LABORATORIO 03 DE AREP - MICROFRAMEWORKS WEB
 Sparkweb es un microframework web que le permite crear fácilmente aplicaciones web  utilizando funciones Lambda.
 En este taller, exploraremos la arquitectura de Sparkweb y crearemos un servidor web que admita funciones similares a  Spark.
 En este ejercicio, implementará un servidor web que puede registrar servicios GET y POST utilizando funciones Lambda.
